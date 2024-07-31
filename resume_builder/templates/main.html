@@ -1,0 +1,45 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body>
+    <form class="input" method="post" action="{% url 'main' %}">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="Name" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="Name" name="Name" required>
+            
+            <label for="job1" class="form-label">Job 1:</label>
+            <input type="text" class="form-control" id="job1" name="job 1" placeholder="can be left blank">
+            
+            <label for="job2" class="form-label">Job 2:</label>
+            <input type="text" class="form-control" id="job2" name="job 2" placeholder="can be left blank">
+            
+            <label for="job3" class="form-label">Job 3:</label>
+            <input type="text" class="form-control" id="job3" name="job 3" placeholder="can be left blank">
+            
+            <label for="project1" class="form-label">Project 1:</label>
+            <input type="text" class="form-control" id="project1" name="project 1" placeholder="can be left blank">
+            
+            <label for="project2" class="form-label">Project 2:</label>
+            <input type="text" class="form-control" id="project2" name="project 2" placeholder="can be left blank">
+            
+            <label for="project3" class="form-label">Project 3:</label>
+            <input type="text" class="form-control" id="project3" name="project 3" placeholder="can be left blank">
+
+            <label for="recipient_email" class="form-label">Enter Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+
+
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</body>
+</html>
